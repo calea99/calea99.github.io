@@ -9,8 +9,8 @@
   --accent: #4f46e5;
   --accent-soft: #eef2ff;
 
-  --font-head: "Space Grotesk", system-ui, sans-serif;
-  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --font-head: "Hanken Grotesk", system-ui, sans-serif;
+  --font-body: "Hanken Grotesk", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 
   --content: 720px;   /* body copy, ~70ch */
