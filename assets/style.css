@@ -8,6 +8,8 @@
   --border: #e4e4e7;
   --accent: #013220;
   --accent-soft: #e8f1ec;
+  --link: #1a7f4b;
+  --link-hover: #013220;
 
   --header-bg: #013220;
   --header-text: #f4f8f5;
@@ -34,6 +36,8 @@
     --border: #2e2e33;
     --accent: #7fd1a3;
     --accent-soft: #0f2a1d;
+    --link: #7fd1a3;
+    --link-hover: #a8e3c2;
   }
 }
 
@@ -57,11 +61,12 @@ body {
 }
 
 a {
-  color: var(--accent);
+  color: var(--link);
   text-underline-offset: 0.2em;
 }
 
 a:hover {
+  color: var(--link-hover);
   text-decoration-thickness: 2px;
 }
 
@@ -323,7 +328,7 @@ h2 {
 }
 
 .post-title:hover {
-  color: var(--accent);
+  color: var(--link);
 }
 
 .post-meta {
