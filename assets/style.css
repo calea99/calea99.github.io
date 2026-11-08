@@ -13,7 +13,11 @@
   --font-body: "IBM Plex Sans", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
 
-  --max: 46rem;
+  --content: 720px;   /* body copy, ~70ch */
+  --gutter: 80px;     /* space between text and margin notes */
+  --aside: 240px;     /* sidebars and margin notes */
+  --breakout: 1040px; /* tools, tables, diagrams */
+  --hero: 1200px;     /* hero and section headers */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -62,9 +66,73 @@ a:hover {
 }
 
 .wrap {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 0 1rem;
+  width: min(var(--hero), 100% - 2rem);
+  margin-inline: auto;
+}
+
+/* Variable-width layout
+   One shared left edge; elements choose how far right they extend:
+   content (720) < breakout (1040) < hero (1200). Margin notes sit in
+   the whitespace to the right of the text on wide screens. */
+.layout {
+  width: min(var(--hero), 100% - 2rem);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns:
+    [hero-start breakout-start content-start] minmax(0, var(--content))
+    [content-end] minmax(0, 1fr)
+    [breakout-end hero-end];
+  align-content: start;
+}
+
+.layout > * {
+  grid-column: content;
+  min-width: 0;
+}
+
+.layout > .breakout {
+  grid-column: breakout;
+}
+
+.layout > .hero {
+  grid-column: hero;
+}
+
+@media (min-width: 1100px) {
+  .layout {
+    grid-template-columns:
+      [hero-start breakout-start content-start] var(--content)
+      [content-end] var(--gutter)
+      [aside-start] var(--aside)
+      [aside-end breakout-end] minmax(0, 1fr)
+      [hero-end];
+  }
+
+  .layout > .aside {
+    grid-column: aside;
+    align-self: start;
+    position: sticky;
+    top: 2rem;
+  }
+}
+
+.aside {
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+/* Hero */
+.hero {
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.25rem, 6vw, 4.25rem);
+  max-width: 18ch;
+}
+
+.hero .lede {
+  max-width: 44rem;
 }
 
 /* Header */
@@ -117,7 +185,7 @@ a:hover {
 
 /* Main */
 main {
-  padding: 3.5rem 0 4rem;
+  padding: 4rem 0 5rem;
 }
 
 .eyebrow {
@@ -148,9 +216,8 @@ h2 {
 }
 
 .lede {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   color: var(--muted);
-  max-width: 38rem;
 }
 
 .note {
