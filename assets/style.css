@@ -6,8 +6,13 @@
   --text: #18181b;
   --muted: #64748b;
   --border: #e4e4e7;
-  --accent: #4f46e5;
-  --accent-soft: #eef2ff;
+  --accent: #013220;
+  --accent-soft: #e8f1ec;
+
+  --header-bg: #013220;
+  --header-text: #f4f8f5;
+  --header-muted: #b5ccbf;
+  --header-accent: #7fd1a3;
 
   --font-head: "Hanken Grotesk", system-ui, sans-serif;
   --font-body: "Hanken Grotesk", system-ui, sans-serif;
@@ -27,8 +32,8 @@
     --text: #f4f4f5;
     --muted: #94a3b8;
     --border: #2e2e33;
-    --accent: #818cf8;
-    --accent-soft: #1e1b4b;
+    --accent: #7fd1a3;
+    --accent-soft: #0f2a1d;
   }
 }
 
@@ -137,7 +142,7 @@ a:hover {
 
 /* Header */
 .site-header {
-  border-bottom: 1px solid var(--border);
+  background: var(--header-bg);
 }
 
 .site-header .wrap {
@@ -154,13 +159,13 @@ a:hover {
   font-family: var(--font-head);
   font-weight: 700;
   font-size: 1.15rem;
-  color: var(--text);
+  color: var(--header-text);
   text-decoration: none;
   letter-spacing: -0.01em;
 }
 
 .wordmark span {
-  color: var(--accent);
+  color: var(--header-accent);
 }
 
 .site-nav ul {
@@ -174,13 +179,24 @@ a:hover {
 .site-nav a {
   font-family: var(--font-mono);
   font-size: 0.875rem;
-  color: var(--muted);
+  color: var(--header-muted);
   text-decoration: none;
 }
 
 .site-nav a:hover,
 .site-nav a[aria-current="page"] {
-  color: var(--accent);
+  color: var(--header-text);
+}
+
+.site-nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-color: var(--header-accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.45em;
+}
+
+.site-header :focus-visible {
+  outline-color: var(--header-accent);
 }
 
 /* Main */
