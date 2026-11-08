@@ -1,14 +1,13 @@
 /* carolynwilborn.com - shared styles */
 
 :root {
-  --bg: #faf6f1;
+  --bg: #fafafa;
   --surface: #ffffff;
-  --text: #2b2420;
-  --muted: #6e625a;
-  --border: #e6ddd3;
-  --accent: #c2541b;
-  --accent-soft: #f6e3d6;
-  --amber: #d98e2b;
+  --text: #18181b;
+  --muted: #64748b;
+  --border: #e4e4e7;
+  --accent: #4f46e5;
+  --accent-soft: #eef2ff;
 
   --font-head: "Space Grotesk", system-ui, sans-serif;
   --font-body: "IBM Plex Sans", system-ui, sans-serif;
@@ -19,14 +18,13 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #1c1714;
-    --surface: #251f1b;
-    --text: #f2eae2;
-    --muted: #b3a597;
-    --border: #3a312b;
-    --accent: #f08a4b;
-    --accent-soft: #3a2619;
-    --amber: #e8a33d;
+    --bg: #18181b;
+    --surface: #202024;
+    --text: #f4f4f5;
+    --muted: #94a3b8;
+    --border: #2e2e33;
+    --accent: #818cf8;
+    --accent-soft: #1e1b4b;
   }
 }
 
