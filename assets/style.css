@@ -229,6 +229,62 @@ h2 {
   font-size: 0.95rem;
 }
 
+/* Margin notes: career timeline */
+.aside-title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0.4rem 0 1rem;
+}
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1rem;
+  border-left: 1px solid var(--border);
+}
+
+.timeline li {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: calc(-1rem - 4px);
+  top: 0.45em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--muted);
+}
+
+.timeline li:last-child::before {
+  background: var(--accent);
+}
+
+.timeline strong {
+  display: block;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.timeline span {
+  display: block;
+  font-size: 0.8125rem;
+}
+
+@media (max-width: 1099px) {
+  .layout > .aside {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+}
+
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--border);
