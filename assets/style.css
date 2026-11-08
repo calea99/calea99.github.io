@@ -229,6 +229,51 @@ h2 {
   font-size: 0.95rem;
 }
 
+/* Writing list */
+.post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-list li {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.post-list li:first-child {
+  padding-top: 0.25rem;
+}
+
+.post-list p {
+  margin: 0;
+}
+
+.post-title {
+  font-family: var(--font-head);
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.post-title:hover {
+  color: var(--accent);
+}
+
+.post-meta {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--muted);
+  margin: 0.35rem 0 0.5rem !important;
+}
+
+.more {
+  margin-top: 2rem;
+  font-weight: 500;
+}
+
 /* Margin notes: career timeline */
 .aside-title {
   font-family: var(--font-mono);
