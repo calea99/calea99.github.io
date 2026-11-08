@@ -229,6 +229,54 @@ h2 {
   font-size: 0.95rem;
 }
 
+/* Home: proof block */
+.proof {
+  margin: 1rem 0 0;
+  padding: 1.5rem 1.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.proof-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 1rem;
+}
+
+.proof dl {
+  margin: 0;
+}
+
+.proof dt {
+  font-family: var(--font-head);
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.proof dt:first-child {
+  margin-top: 0;
+}
+
+.proof dd {
+  margin: 0.25rem 0 0;
+}
+
+.next-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  margin: 1.5rem 0 0;
+  font-weight: 500;
+}
+
+.next-links a::after {
+  content: " \2192";
+}
+
 /* Writing list */
 .post-list {
   list-style: none;
